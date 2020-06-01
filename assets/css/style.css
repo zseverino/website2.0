@@ -10,8 +10,9 @@ html,body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
 }
+
+
 
 body {
     background-color: #000000;
@@ -164,7 +165,7 @@ h2.visible {
 
 h3 {
     opacity: 0;
-    transform: translate(100px, 0px);
+    /* transform: translate(100px, 0px); */
     transition: all 3s;
 }
 
