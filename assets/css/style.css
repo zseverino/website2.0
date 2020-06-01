@@ -12,13 +12,13 @@ body {
     background-color: #000000;
     color: white;
     font-family: 'Squada One', cursive;
-    font-size: large;
+    font-size: x-large;
 
 }
 
 .background {
     position: absolute;
-    top: 0;
+    top: 100px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -26,10 +26,10 @@ body {
 }
 
 .blank-space-large {
-    height: 100px;
+    height: 400px;
 }
 .blank-space {
-    height: 10px;
+    height: 100px;
 }
 
 /* Nav Bar */
@@ -124,6 +124,17 @@ nav.navbar {
     border-bottom-style: inset;
 }
 
+section {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: all 3s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 h1 {
     opacity: 0;
     transform: translate(0, 20px);
@@ -155,4 +166,62 @@ h3 {
 h3.visible {
     opacity: 1;
     transform: translate(0, 0);
+}
+
+.flex-center {
+    width: 100%;
+    min-height: 50vh;
+
+    background: #000;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.icon-3d {
+    padding: 50px;
+    color: #fff;
+}
+
+.icon-3d:hover {
+     -webkit-animation: icon3d 200ms infinite;
+     animation: icon3d 200ms infinite;
+ }
+
+
+@keyframes icon3d {
+    0% {
+        text-shadow: 5px 4px #F2A900, -5px -6px #005cbf;
+    }
+    25% {
+        text-shadow: -5px -6px #F2A900, 5px 4px #005cbf;
+    }
+    50% {
+        text-shadow: 5px -4px #F2A900, -8px 4px #005cbf;
+    }
+    75% {
+        text-shadow: -8px -4px #F2A900, -5px -4px #005cbf;
+    }
+    100% {
+        text-shadow: -5px 0 #F2A900, 5px -4px #005cbf;
+    }
+}
+
+.footer {
+
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Set the fixed height of the footer here */
+    line-height: 60px; /* Vertically center the text there */
+    background-color: #000000;
 }
