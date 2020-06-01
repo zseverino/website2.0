@@ -13,10 +13,16 @@ body {
     color: white;
     font-family: 'Squada One', cursive;
     font-size: large;
+
 }
 
-.container-fluid {
-    max-height: 500px;
+.background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
 }
 
 .blank-space-large {
@@ -118,13 +124,35 @@ nav.navbar {
     border-bottom-style: inset;
 }
 
-section {
+h1 {
     opacity: 0;
     transform: translate(0, 20px);
     transition: all 1s;
 }
 
-section.visible {
+h1.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+h2 {
+    opacity: 0;
+    transform: translate(-100px, 0px);
+    transition: all 3s;
+}
+
+h2.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+h3 {
+    opacity: 0;
+    transform: translate(100px, 0px);
+    transition: all 3s;
+}
+
+h3.visible {
     opacity: 1;
     transform: translate(0, 0);
 }
