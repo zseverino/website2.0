@@ -3,8 +3,7 @@ window.onload = function() {
         selector: '.background',
         color: ['#f2a900', '#808080', '#DBEDF3'],
         connectParticles: true,
-        sizeVariations: 5,
-        maxParticles: 250
+
     });
 };
 
