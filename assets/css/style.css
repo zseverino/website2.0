@@ -4,15 +4,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html,body
-{
-    width: 100%;
+html, body {
     height: 100%;
-    margin: 0px;
-    padding: 0px;
 }
-
-
 
 body {
     background-color: #000000;
@@ -154,7 +148,7 @@ h1.visible {
 
 h2 {
     opacity: 0;
-    transform: translate(-100px, 0px);
+    transform: translate(50px, 0px);
     transition: all 3s;
 }
 
@@ -165,19 +159,19 @@ h2.visible {
 
 h3 {
     opacity: 0;
-    /* transform: translate(100px, 0px); */
+    transform: translate(-50px, 0px);
     transition: all 3s;
 }
 
 h3.visible {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0px, 0);
 }
 
 .gitCard {
     vertical-align: auto;
-    min-width: 365px;
-    max-width: 365px;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 .icon-3d {
