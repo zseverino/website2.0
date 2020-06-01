@@ -1,0 +1,130 @@
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+    font-family: 'Squada One', cursive;
+    font-size: large;
+}
+
+.container-fluid {
+    max-height: 500px;
+}
+
+.blank-space-large {
+    height: 100px;
+}
+.blank-space {
+    height: 10px;
+}
+
+/* Nav Bar */
+.navbar {
+    background-color: #000000;
+    font-family: 'Squada One', cursive;
+    font-size: x-large;
+}
+.navbar .navbar-brand {
+    color: #ffffff;
+    font-size: xx-large;
+
+}
+
+.navbar .navbar-text {
+    color: #ffffff;
+}
+.navbar .navbar-text a {
+    color: #F2A900;
+}
+.navbar .navbar-text a:hover,
+.navbar .navbar-text a:focus {
+    color: #F2A900;
+}
+.navbar .navbar-nav .nav-link {
+    color: #c4c4c4;
+    border-radius: .30rem;
+    margin: 0 0.30em;
+}
+.navbar .navbar-nav .nav-link:not(.disabled):hover,
+.navbar .navbar-nav .nav-link:not(.disabled):focus {
+    color: #F2A900;
+}
+.navbar .navbar-nav .nav-item.active .nav-link,
+.navbar .navbar-nav .nav-item.active .nav-link:hover,
+.navbar .navbar-nav .nav-item.active .nav-link:focus,
+.navbar .navbar-nav .nav-item.show .nav-link,
+.navbar .navbar-nav .nav-item.show .nav-link:hover,
+.navbar .navbar-nav .nav-item.show .nav-link:focus {
+    color: #F2A900;
+    background-color: #ffffff;
+}
+.navbar .navbar-toggle {
+    border-color: #ffffff;
+}
+.navbar .navbar-toggle:hover,
+.navbar .navbar-toggle:focus {
+    background-color: #ffffff;
+}
+.navbar .navbar-toggle .navbar-toggler-icon {
+    color: #ffffff;
+}
+.navbar .navbar-collapse,
+.navbar .navbar-form {
+    border-color: #ffffff;
+}
+.navbar .navbar-link {
+    color: #ffffff;
+}
+.navbar .navbar-link:hover {
+    color: #d2a700;
+}
+.nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #f2a900;
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+
+nav.navbar {
+    border-bottom: 1px solid #808080;
+    border-bottom-style: inset;
+}
+
+section {
+    opacity: 0;
+    transform: translate(0, 20px);
+    transition: all 1s;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
