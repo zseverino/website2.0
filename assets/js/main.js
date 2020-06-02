@@ -7,67 +7,94 @@ window.onload = function() {
     });
 };
 
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $("section")
+(function($) {
 
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i]
+    /**
+     * Copyright 2012, Digital Fusion
+     * Licensed under the MIT license.
+     * http://teamdf.com/jquery-plugins/license/
+     *
+     * @author Sam Sehnert
+     * @desc A small plugin that checks whether elements are within
+     *     the user visible viewport of a web browser.
+     *     only accounts for vertical position, not horizontal.
+     */
 
-        if ($(tag).position().top < pageBottom) {
-            $(tag).addClass("visible")
-        } else {
-            $(tag).removeClass("visible")
-        }
+    $.fn.visible = function(partial) {
+
+        var $t            = $(this),
+            $w            = $(window),
+            viewTop       = $w.scrollTop(),
+            viewBottom    = viewTop + $w.height(),
+            _top          = $t.offset().top,
+            _bottom       = _top + $t.height(),
+            compareTop    = partial === true ? _bottom : _top,
+            compareBottom = partial === true ? _top : _bottom;
+
+        return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+    };
+
+})(jQuery);
+
+var win = $(window);
+
+var allMods = $(".module");
+
+allMods.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+        el.addClass("already-visible");
     }
-})
+});
 
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $("h1")
+win.scroll(function(event) {
 
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i]
-
-        if ($(tag).position().top < pageBottom) {
-            $(tag).addClass("visible")
-        } else {
-            $(tag).removeClass("visible")
+    allMods.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+            el.addClass("come-in");
         }
+    });
+
+});
+
+var allModsRight = $(".module-right");
+
+allModsRight.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+        el.addClass("already-visible");
     }
-})
+});
 
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $("h2")
+win.scroll(function(event) {
 
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i]
-
-        if ($(tag).position().top < pageBottom) {
-            $(tag).addClass("visible")
-        } else {
-            $(tag).removeClass("visible")
+    allModsRight.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+            el.addClass("come-in-right");
         }
+    });
+
+});
+
+var allModsLeft = $(".module-left");
+
+allModsLeft.each(function(i, el) {
+    var el = $(el);
+    if (el.visible(true)) {
+        el.addClass("already-visible");
     }
-})
+});
 
+win.scroll(function(event) {
 
-$(document).on("scroll", function () {
-    var pageTop = $(document).scrollTop()
-    var pageBottom = pageTop + $(window).height()
-    var tags = $("h3")
-
-    for (var i = 0; i < tags.length; i++) {
-        var tag = tags[i]
-
-        if ($(tag).position().top < pageBottom) {
-            $(tag).addClass("visible")
-        } else {
-            $(tag).removeClass("visible")
+    allModsLeft.each(function(i, el) {
+        var el = $(el);
+        if (el.visible(true)) {
+            el.addClass("come-in-left");
         }
-    }
-})
+    });
+
+});
