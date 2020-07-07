@@ -8,13 +8,17 @@ body {
     background-attachment: fixed;
     background-size: cover;
     color: #5f5f5f;
-    font-family: 'Squada One', cursive;
+    font-family: 'Oswald', sans-serif;
     font-size: x-large;
     /* background by SVGBackgrounds.com */
 }
 
 #name {
     color: #ffffff;
+}
+
+h1 {
+    font-family: 'Squada One', cursive;
 }
 .jumbotron {
     background: #f5f5f5;
