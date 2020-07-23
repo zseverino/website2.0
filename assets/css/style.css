@@ -121,7 +121,7 @@ h1 {
 }
 
 .nav-link {
-    text-transform: uppercase;
+
     text-decoration: none;
     color: #ffffff;
     padding: 20px 0px;
@@ -151,7 +151,6 @@ nav.navbar {
     border-bottom: 0px solid #dcdcdc;
     border-bottom-style: inset;
 }
-
 
 
 img {
