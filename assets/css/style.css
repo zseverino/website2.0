@@ -37,7 +37,7 @@ body {
 }
 
 .typewriter h2 {
-    font-size: large;
+    font-size: 2.5vh;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid #808080; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -70,7 +70,7 @@ body {
     height: 25em;
 }
 .blank-space {
-    height: 6em;
+    height: 15vh;
 }
 
 /* Nav Bar */
